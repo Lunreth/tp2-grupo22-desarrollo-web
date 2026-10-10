@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "React",
+    "category": "Frontend",
+    "level": "Intermedio",
+    "description": "Biblioteca para construir interfaces mediante componentes."
+  },
+  {
+    "id": 2,
+    "name": "Vite",
+    "category": "Frontend",
+    "level": "Intermedio",
+    "description": "Herramienta rápida para desarrollo y build de aplicaciones web."
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "category": "Lenguaje",
+    "level": "Intermedio",
+    "description": "Lenguaje utilizado para la lógica interactiva del sitio."
+  },
+  {
+    "id": 4,
+    "name": "HTML",
+    "category": "Frontend",
+    "level": "Inicial",
+    "description": "Lenguaje de marcado para estructurar el contenido."
+  },
+  {
+    "id": 5,
+    "name": "CSS",
+    "category": "Frontend",
+    "level": "Intermedio",
+    "description": "Tecnología utilizada para estilos, layouts y responsive design."
+  },
+  {
+    "id": 6,
+    "name": "React Router",
+    "category": "Frontend",
+    "level": "Intermedio",
+    "description": "Permite implementar navegación entre vistas de React."
+  },
+  {
+    "id": 7,
+    "name": "Git",
+    "category": "Herramienta",
+    "level": "Intermedio",
+    "description": "Sistema de control de versiones para trabajar en equipo."
+  },
+  {
+    "id": 8,
+    "name": "GitHub",
+    "category": "Herramienta",
+    "level": "Intermedio",
+    "description": "Plataforma para alojar el repositorio y colaborar."
+  },
+  {
+    "id": 9,
+    "name": "Vercel",
+    "category": "Deploy",
+    "level": "Inicial",
+    "description": "Servicio utilizado para publicar la aplicación web."
+  },
+  {
+    "id": 10,
+    "name": "JSON",
+    "category": "Datos",
+    "level": "Inicial",
+    "description": "Formato local utilizado para almacenar los recursos."
+  },
+  {
+    "id": 11,
+    "name": "Fetch API",
+    "category": "Web",
+    "level": "Intermedio",
+    "description": "API del navegador para realizar consultas HTTP."
+  },
+  {
+    "id": 12,
+    "name": "Open-Meteo",
+    "category": "API",
+    "level": "Inicial",
+    "description": "API pública utilizada para obtener datos meteorológicos."
+  },
+  {
+    "id": 13,
+    "name": "Responsive Design",
+    "category": "Diseño",
+    "level": "Intermedio",
+    "description": "Técnica para adaptar la interfaz a diferentes pantallas."
+  },
+  {
+    "id": 14,
+    "name": "Flexbox",
+    "category": "CSS",
+    "level": "Intermedio",
+    "description": "Sistema de layout utilizado en distintos componentes."
+  },
+  {
+    "id": 15,
+    "name": "Grid",
+    "category": "CSS",
+    "level": "Intermedio",
+    "description": "Sistema de distribución utilizado en tarjetas y paneles."
+  },
+  {
+    "id": 16,
+    "name": "Glassmorphism",
+    "category": "Diseño",
+    "level": "Intermedio",
+    "description": "Estética basada en transparencias, blur y superficies de vidrio."
+  },
+  {
+    "id": 17,
+    "name": "Figma",
+    "category": "Diseño",
+    "level": "Inicial",
+    "description": "Herramienta opcional para prototipar interfaces."
+  },
+  {
+    "id": 18,
+    "name": "DevTools",
+    "category": "Herramienta",
+    "level": "Intermedio",
+    "description": "Herramientas del navegador para inspección y debugging."
+  },
+  {
+    "id": 19,
+    "name": "ESLint",
+    "category": "Calidad",
+    "level": "Intermedio",
+    "description": "Herramienta para detectar problemas en código JavaScript."
+  },
+  {
+    "id": 20,
+    "name": "Accesibilidad",
+    "category": "Calidad",
+    "level": "Intermedio",
+    "description": "Buenas prácticas para que la interfaz pueda ser utilizada por más personas."
+  }
+]
