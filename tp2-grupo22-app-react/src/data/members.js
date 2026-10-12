@@ -58,6 +58,11 @@ export const members = [
     role: "Estructura Principal · Testing",
     shortBio: "Armado del proyecto base, testing de componentes y módulos",
     bio: "Estudiante de Tecnicatura Superior en Desarrollo de Software. Trabajo como profesor de materias relacionadas con la programación y redes en escuelas técnicas del GCBA.",
+    contributions: [
+      "Creación de 1er proyecto base",
+      "Creación de plantilla de componentes y módulos principales",
+      "Testing y Debugging"
+    ],
     hobbies: ["Handball", "Diseño 3D", "Ubuntu Server"],
     skills: ["JavaScript", "C#", "Kotlin"],
     github: "https://github.com/Lunreth"
