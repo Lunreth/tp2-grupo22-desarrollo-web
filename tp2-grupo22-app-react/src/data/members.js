@@ -52,13 +52,14 @@ export const members = [
   },
   {
     id: "integrante-5",
-    name: "Integrante 5",
-    initials: "I5",
-    role: "Rol a completar",
-    shortBio: "Espacio para una breve presentación personal.",
-    bio: "Escribir aquí una presentación más completa: intereses, habilidades, experiencia y aporte al equipo.",
-    hobbies: ["Hobby 1", "Hobby 2", "Hobby 3"],
-    skills: ["Habilidad 1", "Habilidad 2", "Habilidad 3"],
-    github: "https://github.com/USUARIO_5"
+    name: "Kevin Martínez Cáceres",
+    initials: "KM",
+    avatar: "/kdmc.jpg",
+    role: "Estructura Principal · Testing",
+    shortBio: "Armado del proyecto base, testing de componentes y módulos",
+    bio: "Estudiante de Tecnicatura Superior en Desarrollo de Software. Trabajo como profesor de materias relacionadas con la programación y redes en escuelas técnicas del GCBA.",
+    hobbies: ["Handball", "Diseño 3D", "Ubuntu Server"],
+    skills: ["JavaScript", "C#", "Kotlin"],
+    github: "https://github.com/Lunreth"
   }
 ];
