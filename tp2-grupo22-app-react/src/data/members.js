@@ -23,14 +23,15 @@ export const members = [
   },
   {
     id: "integrante-3",
-    name: "Integrante 3",
-    initials: "I3",
-    role: "Rol a completar",
-    shortBio: "Espacio para una breve presentación personal.",
-    bio: "Escribir aquí una presentación más completa: intereses, habilidades, experiencia y aporte al equipo.",
-    hobbies: ["Hobby 1", "Hobby 2", "Hobby 3"],
-    skills: ["Habilidad 1", "Habilidad 2", "Habilidad 3"],
-    github: "https://github.com/USUARIO_3"
+    name: "David Carlos Ruiz Flores",
+    initials: "DR",
+    avatar: "/david.jpg",
+    role: "Archivo JSON, tarjetas, búsqueda, listado",
+    shortBio: "Responsable de la estructura de datos y la interfaz de listado y búsqueda del equipo.",
+    bio: "Me encargo de la estructura de datos en el archivo JSON y del desarrollo de las tarjetas, el buscador y el listado de integrantes. Me interesa la programación y el trabajo en equipo.",
+    hobbies: ["Futbol", "fotografía", "Edicion de videos"],
+    skills: ["Python", "JavaScript", "MySQL"],
+    github: "https://github.com/Davidruizf"
   },
   {
     id: "integrante-4",
