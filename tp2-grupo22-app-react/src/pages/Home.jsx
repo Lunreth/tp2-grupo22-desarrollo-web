@@ -25,7 +25,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-orb">
-          <div className="orb-inner">G</div>
+          <div className="orb-inner">N22</div>
         </div>
       </section>
 
