@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <section className="hero glass-card">
         <div className="hero-content">
-          <span className="eyebrow"><Sparkles size={15} /> TP2 · Proyecto React</span>
-          <h1>Somos <span>Equipo Glass</span>.</h1>
+          <span className="eyebrow"><Sparkles size={15} /> TP2 · Proyecto React · IFTS 29</span>
+          <h1>Somos <span>Equipo Glass22</span></h1>
           <p className="hero-lead">
             Una aplicación creada para presentar quiénes somos, qué sabemos hacer
             y cómo construimos una experiencia web colaborativa.
