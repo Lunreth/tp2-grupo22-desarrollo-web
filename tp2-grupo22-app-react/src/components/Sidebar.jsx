@@ -35,10 +35,10 @@ export default function Sidebar({ darkMode, setDarkMode }) {
 
       <aside className={open ? "sidebar open" : "sidebar"}>
         <div className="brand">
-          <div className="brand-mark">G</div>
+          <div className="brand-mark">N22</div>
           <div>
-            <strong>Equipo Glass</strong>
-            <span>TP2 · React</span>
+            <strong>Equipo Nexus</strong>
+            <span>TP2 · React · Grupo 22</span>
           </div>
         </div>
 

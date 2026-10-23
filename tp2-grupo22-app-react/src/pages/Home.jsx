@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <section className="hero glass-card">
         <div className="hero-content">
-          <span className="eyebrow"><Sparkles size={15} /> TP2 · Proyecto React</span>
-          <h1>Somos <span>Equipo Glass</span>.</h1>
+          <span className="eyebrow"><Sparkles size={15} /> TP2 · Proyecto React · IFTS 29 · Desarrollo de Sistemas Web</span>
+          <h1>Somos <span>Equipo Nexus</span></h1>
           <p className="hero-lead">
             Una aplicación creada para presentar quiénes somos, qué sabemos hacer
             y cómo construimos una experiencia web colaborativa.
@@ -25,7 +25,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-orb">
-          <div className="orb-inner">G</div>
+          <div className="orb-inner">N22</div>
         </div>
       </section>
 

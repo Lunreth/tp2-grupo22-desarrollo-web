@@ -43,7 +43,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   --text: #172033;
   --muted: #58657a;
   --glass: rgba(255,255,255,.58);
-  --glass-strong: rgba(255,255,255,.75);
+  --glass-strong: rgba(50,50,50,.75);
   --border: rgba(255,255,255,.82);
   --shadow: 0 22px 60px rgba(61,79,120,.18);
   --accent: #6d4aff;
