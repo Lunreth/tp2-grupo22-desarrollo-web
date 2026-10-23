@@ -1,14 +1,19 @@
 export const members = [
-  {
+   {
     id: "integrante-1",
-    name: "Integrante 1",
-    initials: "I1",
-    role: "Rol a completar",
-    shortBio: "Espacio para una breve presentación personal.",
-    bio: "Escribir aquí una presentación más completa: intereses, habilidades, experiencia y aporte al equipo.",
-    hobbies: ["Hobby 1", "Hobby 2", "Hobby 3"],
-    skills: ["Habilidad 1", "Habilidad 2", "Habilidad 3"],
-    github: "https://github.com/USUARIO_1"
+    name: "Dominguez Angel",
+    initials: "AD",
+    role: "Coordinación general y documentación",
+    shortBio: "Estudiante de Desarrollo de Software.",
+    bio: "Soy estudiante de Desarrollo de Software. Me interesa la organización, la documentación y el trabajo colaborativo. En este proyecto tengo a cargo la coordinación general y la documentación del equipo.",
+    hobbies: ["Cine", "Baile", "Vóley"],
+    skills: ["Organización", "Documentación", "Trabajo colaborativo"],
+    contributions: [
+      "Coordinación general del equipo.",
+      "Revisión de la consigna y los criterios de evaluación.",
+      "Documentación del proyecto en el README."
+    ],
+    github: "https://github.com/ad29dominguez-design"
   },
   {
     id: "integrante-2",
