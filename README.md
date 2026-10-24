@@ -8,7 +8,7 @@ El proyecto presenta una portada del equipo, cinco perfiles individuales y una b
 
 ## Integrantes
 - [Dominguez Angel](https://github.com/ad29dominguez-design): coordinación general, control de la consigna y la rúbrica, README principal, recopilación de responsabilidades y declaración de IA, revisión final de navegación y contenido, y perfil 1.
-- Cimar Gomez Torrez: identidad visual, portada y perfil 2.
+- [Cimar Gomez Torrez](https://github.com/CimarGomez): identidad visual, portada y perfil 2.
 - [David Carlos Ruiz Flores](https://github.com/Davidruizf): recursos JSON, búsqueda, filtros y perfil 3.
 - [Rodrigo Nicolás Molina](https://github.com/Rodrigo-Molina12506): API pública, árbol de componentes, bitácora y perfil 4.
 - [Kevin Martínez Cáceres](https://github.com/Lunreth): estructura React, navegación, adaptación móvil, publicación y perfil 5.
@@ -26,11 +26,11 @@ El proyecto presenta una portada del equipo, cinco perfiles individuales y una b
 ### Dominguez Angel
 
 - Aplicaciones utilizadas: ChatGPT y Codex.
-- Modelo identificado en la captura: GPT-6.1 Sol.
-- Tareas asistidas: preparación del perfil en React, redacción y revisión del README, orientación para ejecutar el proyecto y resolución de dudas sobre GitHub.
-- Verificación realizada: revisión del perfil en la aplicación y prueba del botón que alterna entre aportes, habilidades y hobbies.
+- Modelo utilizado en ambas aplicaciones: GPT-6.1 Sol.
+- Tareas asistidas: preparación del perfil en React, redacción y revisión del README, ejecución local del proyecto, orientación sobre GitHub y revisión del cumplimiento de la consigna.
+- Verificación realizada: revisión del contenido incorporado, prueba del perfil y del botón que alterna entre aportes, habilidades y hobbies.
 
-Queda pendiente confirmar el modelo utilizado en la otra aplicación y recopilar la declaración de IA de los demás integrantes.
+Las declaraciones de uso de IA de los demás integrantes están pendientes de recopilación.
 
 
 ## Publicación
