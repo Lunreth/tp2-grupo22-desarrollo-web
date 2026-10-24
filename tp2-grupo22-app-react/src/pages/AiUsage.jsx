@@ -1,11 +1,16 @@
 import GlassCard from "../components/GlassCard";
 
 const rows = [
-  ["Integrante 1", "ChatGPT", "GPT-5.6 Luna", "Arquitectura React y componentes"],
-  ["Integrante 2", "ChatGPT", "GPT-5.6 Luna", "Diseño glassmorphism y CSS"],
-  ["Integrante 3", "ChatGPT", "GPT-5.6 Luna", "JSON, búsqueda y filtros"],
-  ["Integrante 4", "ChatGPT", "GPT-5.6 Luna", "API pública y estados"],
-  ["Integrante 5", "ChatGPT", "GPT-5.6 Luna", "Documentación y pruebas"]
+  [
+    "Dominguez Angel",
+    "ChatGPT y Codex",
+    "GPT-6.1 Sol en ambas aplicaciones",
+    "Perfil React, redacción y revisión del README, ejecución local, orientación sobre GitHub y revisión de la consigna."
+  ],
+  ["Cimar Gomez Torrez", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"],
+  ["David Carlos Ruiz Flores", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"],
+  ["Rodrigo Nicolás Molina", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"],
+  ["Kevin Martínez Cáceres", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"]
 ];
 
 export default function AiUsage() {
@@ -28,7 +33,10 @@ export default function AiUsage() {
             </tbody>
           </table>
         </div>
-        <p className="note">Reemplazar los datos de ejemplo por el registro real del equipo antes de entregar.</p>
+        <p className="note"> 
+          La declaración de Dominguez Angel está confirmada. Las declaraciones
+          de los demás integrantes están pendientes de recopilación.
+        </p>
       </GlassCard>
     </section>
   );

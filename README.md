@@ -26,11 +26,11 @@ El proyecto presenta una portada del equipo, cinco perfiles individuales y una b
 ### Dominguez Angel
 
 - Aplicaciones utilizadas: ChatGPT y Codex.
-- Modelo identificado en la captura: GPT-6.1 Sol.
-- Tareas asistidas: preparación del perfil en React, redacción y revisión del README, orientación para ejecutar el proyecto y resolución de dudas sobre GitHub.
-- Verificación realizada: revisión del perfil en la aplicación y prueba del botón que alterna entre aportes, habilidades y hobbies.
+- Modelo utilizado en ambas aplicaciones: GPT-6.1 Sol.
+- Tareas asistidas: preparación del perfil en React, redacción y revisión del README, ejecución local del proyecto, orientación sobre GitHub y revisión del cumplimiento de la consigna.
+- Verificación realizada: revisión del contenido incorporado, prueba del perfil y del botón que alterna entre aportes, habilidades y hobbies.
 
-Queda pendiente confirmar el modelo utilizado en la otra aplicación y recopilar la declaración de IA de los demás integrantes.
+Las declaraciones de uso de IA de los demás integrantes están pendientes de recopilación.
 
 
 ## Publicación
