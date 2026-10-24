@@ -9,7 +9,7 @@ El proyecto presenta una portada del equipo, cinco perfiles individuales y una b
 ## Integrantes
 - [Dominguez Angel](https://github.com/ad29dominguez-design): coordinación general, control de la consigna y la rúbrica, README principal, recopilación de responsabilidades y declaración de IA, revisión final de navegación y contenido, y perfil 1.
 - Cimar Gomez Torrez: identidad visual, portada y perfil 2.
-- David Carlos Ruiz Flores: recursos JSON, búsqueda, filtros y perfil 3.
+- [David Carlos Ruiz Flores](https://github.com/Davidruizf): recursos JSON, búsqueda, filtros y perfil 3.
 - [Rodrigo Nicolás Molina](https://github.com/Rodrigo-Molina12506): API pública, árbol de componentes, bitácora y perfil 4.
 - [Kevin Martínez Cáceres](https://github.com/Lunreth): estructura React, navegación, adaptación móvil, publicación y perfil 5.
 ## Tecnologías
