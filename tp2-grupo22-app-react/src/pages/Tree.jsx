@@ -54,75 +54,149 @@ const TreeNode = ({ name, type, description, children }) => {
 
 const Tree = () => {
   // Jerarquía real de componentes de la aplicación React del equipo
-  const componentTreeData = {
+    const componentTreeData = {
     name: 'App',
     type: 'Root Component',
-    description: 'Contenedor principal con configuración de React Router',
+    description: 'Gestiona el tema y las rutas; está dentro de BrowserRouter',
     children: [
       {
         name: 'Layout',
         type: 'Layout',
-        description: 'Estructura principal con Sidebar y área de contenido dinámico',
+        description: 'Organiza la navegación y el contenido',
         children: [
           {
             name: 'Sidebar',
             type: 'Component',
-            description: 'Menú lateral de navegación con selector de tema Claro/Oscuro'
+            description: 'Navegación, menú móvil y selector de tema'
           },
           {
-            name: 'Home',
-            type: 'Page',
-            description: 'Portada principal con presentación del equipo NEXUS y acceso a perfiles',
+            name: 'Routes',
+            type: 'Router',
+            description: 'Muestra la página que corresponde a la URL; las páginas son alternativas',
             children: [
-              { name: 'MemberCard', type: 'Component', description: 'Tarjetas individuales para acceder al perfil de cada integrante' }
+              {
+                name: 'Home',
+                type: 'Page',
+                description: 'Portada del equipo',
+                children: [
+                  {
+                    name: 'GlassCard',
+                    type: 'Component',
+                    description: 'Tarjetas de presentación'
+                  },
+                  {
+                    name: 'MemberCard',
+                    type: 'Component',
+                    description: 'Una tarjeta por integrante',
+                    children: [
+                      { name: 'GlassCard', type: 'Component' }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: 'Members',
+                type: 'Page',
+                description: 'Listado del equipo',
+                children: [
+                  {
+                    name: 'MemberCard',
+                    type: 'Component',
+                    description: 'Una tarjeta por integrante',
+                    children: [
+                      { name: 'GlassCard', type: 'Component' }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: 'MemberProfile',
+                type: 'Page',
+                description: 'Perfil seleccionado e interacción de aportes',
+                children: [
+                  {
+                    name: 'GlassCard',
+                    type: 'Component',
+                    description: 'Presentación, habilidades, hobbies o aportes'
+                  }
+                ]
+              },
+              {
+                name: 'Resources',
+                type: 'Page',
+                description: 'JSON local con búsqueda y filtro',
+                children: [
+                  {
+                    name: 'ResourceCard',
+                    type: 'Component',
+                    description: 'Una tarjeta por recurso visible',
+                    children: [
+                      { name: 'GlassCard', type: 'Component' }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: 'ApiPage',
+                type: 'Page',
+                description: 'Consulta Open-Meteo y gestiona carga, error y actualización',
+                children: [
+                  { name: 'GlassCard', type: 'Component' }
+                ]
+              },
+              {
+                name: 'Tree',
+                type: 'Page',
+                description: 'Esquema de los componentes propios y la navegación',
+                children: [
+                  {
+                    name: 'GlassCard',
+                    type: 'Component',
+                    children: [
+                      {
+                        name: 'TreeNode',
+                        type: 'Component',
+                        description: 'Renderiza cada nodo y sus hijos recursivamente'
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                name: 'Bitacora',
+                type: 'Page',
+                description: 'Registros con desplegables',
+                children: [
+                  {
+                    name: 'GlassCard',
+                    type: 'Component',
+                    description: 'Una tarjeta por registro'
+                  }
+                ]
+              },
+              {
+                name: 'AiUsage',
+                type: 'Page',
+                description: 'Declaración de uso de IA',
+                children: [
+                  {
+                    name: 'GlassCard',
+                    type: 'Component',
+                    description: 'Contiene la tabla de declaraciones'
+                  }
+                ]
+              },
+              {
+                name: 'Navigate',
+                type: 'Router',
+                description: 'Vuelve al inicio cuando la ruta no existe'
+              }
             ]
-          },
-          {
-            name: 'Members',
-            type: 'Page',
-            description: 'Vista con listado de perfiles del equipo'
-          },
-          {
-            name: 'MemberProfile',
-            type: 'Page',
-            description: 'Página individual del perfil de cada integrante con interacción funcional'
-          },
-          {
-            name: 'Resources',
-            type: 'Page',
-            description: 'Listado dinámico del archivo JSON local con buscador y filtros',
-            children: [
-              { name: 'ResourceCard', type: 'Component', description: 'Tarjeta reutilizable para mostrar cada recurso del JSON' }
-            ]
-          },
-          {
-            name: 'ApiPage',
-            type: 'Page',
-            description: 'Sección con consumo de la API de clima Open-Meteo en vivo',
-            children: [
-              { name: 'GlassCard', type: 'Component', description: 'Contenedor con efecto de transparencia Glassmorphism' }
-            ]
-          },
-          {
-            name: 'Tree',
-            type: 'Page',
-            description: 'Visualización interactiva e investigativa del árbol de componentes'
-          },
-          {
-            name: 'Bitacora',
-            type: 'Page',
-            description: 'Registro de avances del equipo con filtros y desplegables'
-          },
-          {
-            name: 'AiUsage',
-            type: 'Page',
-            description: 'Declaración detallada del uso de Inteligencia Artificial por integrante'
           }
         ]
       }
     ]
   };
-
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <h2>Árbol de Componentes del Proyecto</h2>
