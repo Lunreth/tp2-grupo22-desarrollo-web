@@ -40,6 +40,11 @@ export const members = [
     role: "Archivo JSON, tarjetas, búsqueda, listado",
     shortBio: "Responsable de la estructura de datos y la interfaz de listado y búsqueda del equipo.",
     bio: "Me encargo de la estructura de datos en el archivo JSON y del desarrollo de las tarjetas, el buscador y el listado de integrantes. Me interesa la programación y el trabajo en equipo.",
+    contributions: [
+      "Estructura de datos en el archivo JSON local.",
+      "Desarrollo de tarjetas para mostrar los recursos.",
+      "Búsqueda, filtros y listado de recursos."
+    ],
     hobbies: ["Futbol", "fotografía", "Edicion de videos"],
     skills: ["Python", "JavaScript", "MySQL"],
     github: "https://github.com/Davidruizf"
