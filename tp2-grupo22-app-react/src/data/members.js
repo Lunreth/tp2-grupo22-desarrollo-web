@@ -18,14 +18,19 @@ export const members = [
   },
   {
     id: "integrante-2",
-    name: "Integrante 2",
-    initials: "I2",
-    role: "Rol a completar",
-    shortBio: "Espacio para una breve presentación personal.",
-    bio: "Escribir aquí una presentación más completa: intereses, habilidades, experiencia y aporte al equipo.",
-    hobbies: ["Hobby 1", "Hobby 2", "Hobby 3"],
-    skills: ["Habilidad 1", "Habilidad 2", "Habilidad 3"],
-    github: "https://github.com/USUARIO_2"
+    name: "Cimar Gomez Torrez",
+    initials: "CG",
+    avatar: "/cimar.jpg",
+    role: "Identidad visual y portada",
+    shortBio: "Desarrollo de la identidad visual y portada.",
+    bio: "Estudiante de la Tecnicatura en Desarrollo de Software. Tengo conocimientos de Python, HTML y C#. En este proyecto participo en la identidad visual del equipo y el diseño de la portada.",
+    contributions: [
+      "Personalización de los colores, fondos y estilos visuales del sitio.",
+      "Diseño y organización de la portada del equipo.",
+    ],
+    hobbies: ["Futbol", "Anime", "Gaming"],
+    skills: ["Python", "HTML", "C#"],
+    github: "https://github.com/CimarGomez"
   },
   {
     id: "integrante-3",
