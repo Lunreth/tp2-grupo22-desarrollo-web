@@ -3,6 +3,7 @@ export const members = [
     id: "integrante-1",
     name: "Dominguez Angel",
     initials: "AD",
+    avatar: "/angel.jpg",
     role: "Coordinación general y documentación",
     shortBio: "Estudiante de Desarrollo de Software.",
     bio: "Soy estudiante de Desarrollo de Software. Me interesa la organización, la documentación y el trabajo colaborativo. En este proyecto tengo a cargo la coordinación general y la documentación del equipo.",
