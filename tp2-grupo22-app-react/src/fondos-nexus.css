@@ -1,0 +1,223 @@
+/* Importar después de styles.css. Fondos decorativos*/
+.app.dark {
+  --nx-base: #09111e;
+  --nx-end: #151a29;
+  --nx-grid: rgba(103, 232, 249, .16);
+  --nx-grid-major: rgba(167, 139, 250, .17);
+  --nx-node: rgba(103, 232, 249, .55);
+  --nx-scan: rgba(75, 204, 246, .12);
+  --nx-metal: #172231;
+  --nx-metal-shadow: #0a1220;
+  --nx-metal-shine: #314458;
+  --nx-brush: rgba(206, 225, 242, .07);
+  --nx-seam: rgba(1, 7, 16, .65);
+  --nx-sidebar-light: rgba(143, 227, 255, .24);
+  --nx-hero: #13142b;
+  --nx-hero-end: #0d2233;
+  --nx-orbit: rgba(167, 139, 250, .35);
+  --nx-orbit-soft: rgba(103, 232, 249, .20);
+  --nx-hero-grid: rgba(167, 139, 250, .055);
+}
+
+.app.light {
+  --nx-base: #e8eef5;
+  --nx-end: #d9e3ed;
+  --nx-grid: rgba(15, 115, 150, .17);
+  --nx-grid-major: rgba(105, 65, 198, .13);
+  --nx-node: rgba(8, 127, 150, .60);
+  --nx-scan: rgba(37, 146, 185, .12);
+  --nx-metal: #dce5ee;
+  --nx-metal-shadow: #b7c6d5;
+  --nx-metal-shine: #f7fcff;
+  --nx-brush: rgba(30, 60, 90, .09);
+  --nx-seam: rgba(43, 68, 94, .16);
+  --nx-sidebar-light: rgba(255, 255, 255, .85);
+  --nx-hero: #f3efff;
+  --nx-hero-end: #e8f7fa;
+  --nx-orbit: rgba(105, 65, 198, .28);
+  --nx-orbit-soft: rgba(8, 127, 150, .19);
+  --nx-hero-grid: rgba(105, 65, 198, .045);
+}
+
+/*Fondo general: superficie tech con una grilla que se desplaza, nodos y barrido luminoso.*/
+.app .layout {
+  background: linear-gradient(135deg, var(--nx-base), var(--nx-end));
+  animation: none;
+}
+.app .ambient { display: none; }
+.app .main-content { isolation: isolate; }
+
+.app .main-content::before,
+.app .main-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.app .main-content::before {
+  background-image:
+    linear-gradient(var(--nx-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--nx-grid) 1px, transparent 1px),
+    linear-gradient(var(--nx-grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--nx-grid-major) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 160px 160px, 160px 160px;
+  animation: nexus-tech-grid 18s linear infinite;
+}
+
+.app .main-content::after {
+  background-image:
+    radial-gradient(circle, var(--nx-node) 0 2px, transparent 3px),
+    radial-gradient(circle, var(--nx-node) 0 1px, transparent 2px),
+    repeating-linear-gradient(0deg, transparent 0 3px, var(--nx-brush) 3px 4px),
+    linear-gradient(125deg, transparent 35%, var(--nx-scan) 48%, transparent 61%);
+  background-size: 160px 160px, 240px 240px, 100% 4px, 250% 100%;
+  background-position: 0 0, 80px 80px, 0 0, 150% 0;
+  opacity: .65;
+  animation: nexus-tech-data 12s linear infinite;
+}
+
+@keyframes nexus-tech-grid {
+  from { background-position: 0 0, 0 0, 0 0, 0 0; }
+  to { background-position: 0 160px, 0 160px, 0 160px, 0 160px; }
+}
+@keyframes nexus-tech-data {
+  from { background-position: 0 0, 80px 80px, 0 0, 150% 0; }
+  to { background-position: 0 160px, 80px 320px, 0 0, -50% 0; }
+}
+
+/*Sidebar: metal cepillado, juntas de panel y reflejo móvil. */
+.app .sidebar {
+  background:
+    linear-gradient(110deg,
+      var(--nx-metal-shadow) 0%, var(--nx-metal) 24%,
+      var(--nx-metal-shine) 49%, var(--nx-metal) 70%,
+      var(--nx-metal-shadow) 100%);
+  border-right: 1px solid var(--nx-grid);
+  box-shadow: inset -2px 0 0 var(--nx-brush), 8px 0 35px rgba(0, 0, 0, .12);
+}
+
+.app .sidebar::before,
+.app .sidebar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.app .sidebar::before {
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 2px, var(--nx-brush) 2px 3px),
+    repeating-linear-gradient(90deg, transparent 0 63px, var(--nx-seam) 63px 65px, var(--nx-brush) 65px 66px),
+    repeating-linear-gradient(0deg, transparent 0 149px, var(--nx-seam) 149px 151px);
+}
+
+.app .sidebar::after {
+  background-image:
+    linear-gradient(115deg, transparent 32%, var(--nx-sidebar-light) 48%, transparent 62%),
+    repeating-linear-gradient(0deg, transparent 0 87px, var(--nx-node) 87px 90px, transparent 90px 180px);
+  background-size: 320% 100%, 2px 180px;
+  background-repeat: no-repeat, repeat-y;
+  background-position: 150% 0, right 8px top 0;
+  opacity: .65;
+  animation: nexus-metal-reflection 7s linear infinite;
+}
+.app .sidebar > * { position: relative; z-index: 1; }
+
+@keyframes nexus-metal-reflection {
+  from { background-position: 150% 0, right 8px top 0; }
+  to { background-position: -50% 0, right 8px top 180px; }
+}
+
+/*Portada: agrega las órbitas */
+.app .hero {
+  isolation: isolate;
+  background: linear-gradient(115deg, var(--nx-hero), var(--nx-hero-end));
+  border-color: var(--border);
+}
+.app .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--nx-hero-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--nx-hero-grid) 1px, transparent 1px);
+  background-size: 34px 34px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000);
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+
+.app .hero::after { content: none; animation: none; }
+.app .hero > * { position: relative; z-index: 1; }
+.app .hero-orb { position: relative; isolation: isolate; }
+.app .hero-orb > * { position: relative; z-index: 1; }
+
+.app .hero-orb::before {
+  content: "";
+  position: absolute;
+  width: clamp(270px, 135%, 440px);
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  pointer-events: none;
+  border: 1px solid var(--nx-orbit);
+  border-radius: 50%;
+  background-image:
+    radial-gradient(circle at 50% 8%, var(--accent2) 0 3px, transparent 4px),
+    radial-gradient(circle at 20% 76%, var(--accent) 0 3px, transparent 4px),
+    radial-gradient(circle at center,
+      transparent 0 31%, var(--nx-orbit-soft) 31% 31.3%,
+      transparent 31.6% 51%, var(--nx-orbit) 51% 51.3%, transparent 51.6%);
+  opacity: .75;
+  animation: nexus-emblem-orbit 45s linear infinite;
+}
+@keyframes nexus-emblem-orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@media (max-width: 800px) {
+  .app .main-content::before { animation-duration: 28s; }
+  .app .main-content::after { animation-duration: 20s; opacity: .45; }
+  .app .sidebar::after { animation-duration: 10s; }
+  .app .hero-orb::before { width: clamp(250px, 115%, 360px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app .main-content::before, .app .main-content::after,
+  .app .sidebar::after, .app .hero-orb::before { animation: none; }
+  .app .hero-orb::before { transform: translate(-50%, -50%); }
+}
+
+/* Optimización para celulares y dispositivos táctiles */
+@media (max-width: 800px), (hover: none) and (pointer: coarse) {
+  .app .main-content::before,
+  .app .main-content::after,
+  .app .sidebar::after {
+    animation: none;
+  }
+
+  /* Evita recalcular el fondo desenfocado de cada tarjeta */
+  .app .glass-card,
+  .app .sidebar,
+  .app .mobile-menu {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* Mantiene legibles las tarjetas sin el efecto de vidrio */
+  .app.dark .glass-card:not(.hero) {
+    background: rgba(18, 25, 43, .95);
+  }
+
+  .app.light .glass-card:not(.hero) {
+    background: rgba(255, 255, 255, .95);
+  }
+}

@@ -35,7 +35,11 @@ export default function Sidebar({ darkMode, setDarkMode }) {
 
       <aside className={open ? "sidebar open" : "sidebar"}>
         <div className="brand">
-          <div className="brand-mark">N22</div>
+          <img
+            src="/nexus.png"
+            alt="Emblema de Equipo Nexus"
+            className="nexus-brand-logo"
+          />
           <div>
             <strong>Equipo Nexus</strong>
             <span>TP2 · React · Grupo 22</span>

@@ -20,6 +20,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .app {
   min-height: 100vh;
+  color: var(--text);
   transition: background .35s ease, color .35s ease;
 }
 
@@ -338,7 +339,7 @@ td { color: var(--muted); }
 @media (max-width: 1050px) {
   .feature-grid, .resource-grid { grid-template-columns: repeat(2, 1fr); }
   .hero { grid-template-columns: 1fr; }
-  .hero-orb { display: none; }
+  .hero-orb { display: grid; }
 }
 
 @media (max-width: 800px) {
@@ -453,4 +454,41 @@ body.dark-mode .page-title h1,
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+}
+
+/* Emblema de la portada */
+.nexus-hero-logo {
+  display: block;
+  width: min(100%, 280px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(103, 232, 249, .18));
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Emblema de la barra lateral */
+.nexus-brand-logo {
+  display: block;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 1050px) {
+  .nexus-hero-logo {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .nexus-hero-logo {
+    width: min(100%, 190px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexus-hero-logo {
+    animation: none;
+  }
 }

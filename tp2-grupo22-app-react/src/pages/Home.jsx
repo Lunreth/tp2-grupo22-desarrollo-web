@@ -25,7 +25,11 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-orb">
-          <div className="orb-inner">N22</div>
+          <img
+            src="/nexus.png"
+            alt="Emblema de Equipo Nexus"
+            className="nexus-hero-logo"
+          />
         </div>
       </section>
 
