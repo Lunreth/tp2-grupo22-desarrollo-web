@@ -9,8 +9,11 @@ const rows = [
   ],
   ["Cimar Gomez Torrez", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"],
   ["David Carlos Ruiz Flores", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"],
-  ["Rodrigo Nicolás Molina", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"],
-  ["Kevin Martínez Cáceres", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"]
+ 
+  ["Rodrigo Nicolás Molina", "Gemini", "Gemini 1.5 Pro", 
+    "refactorización y diseño interactivo del Árbol de componentes; integración de la Bitácora y maquetación del Perfil 4"],
+ 
+    ["Kevin Martínez Cáceres", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"]
 ];
 
 export default function AiUsage() {

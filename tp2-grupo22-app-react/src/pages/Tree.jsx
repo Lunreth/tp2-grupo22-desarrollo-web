@@ -2,12 +2,17 @@ import React, { useState } from 'react';
 import GlassCard from '../components/GlassCard';
 
 // Componente recursivo para representación interactiva del Árbol de Componentes
+// Sustituí SOLO el componente TreeNode por este:
+
+
+
+
 const TreeNode = ({ name, type, description, children }) => {
   const [isOpen, setIsOpen] = useState(true);
   const hasChildren = children && children.length > 0;
 
   return (
-    <div style={{ marginLeft: '20px', marginTop: '8px', marginBottom: '8px' }}>
+    <div style={{ marginLeft: '16px', marginTop: '6px', marginBottom: '6px', position: 'relative' }}>
       <div
         onClick={() => hasChildren && setIsOpen(!isOpen)}
         style={{
@@ -20,12 +25,26 @@ const TreeNode = ({ name, type, description, children }) => {
           border: '1px solid rgba(255, 255, 255, 0.12)',
           cursor: hasChildren ? 'pointer' : 'default',
           userSelect: 'none',
-          transition: 'all 0.2s ease'
+          transition: 'all 0.2s ease',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)';
+          e.currentTarget.style.borderColor = 'rgba(168, 85, 247, 0.4)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.06)';
+          e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
         }}
       >
         {hasChildren && (
-          <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>
-            {isOpen ? '▼' : '▶'}
+          <span style={{ 
+            fontSize: '0.75rem', 
+            color: '#a78bfa',
+            transform: isOpen ? 'rotate(0deg)' : 'rotate(-90deg)', 
+            transition: 'transform 0.2s ease' 
+          }}>
+            ▼
           </span>
         )}
         <strong style={{ color: type === 'Layout' ? '#38bdf8' : type === 'Page' ? '#a78bfa' : '#f472b6' }}>
@@ -41,8 +60,14 @@ const TreeNode = ({ name, type, description, children }) => {
         )}
       </div>
 
+      {/* Renderizado de ramas con línea sólida continua */}
       {hasChildren && isOpen && (
-        <div style={{ borderLeft: '2px dashed rgba(255, 255, 255, 0.15)', marginLeft: '10px', paddingLeft: '6px' }}>
+        <div style={{ 
+          borderLeft: '2px solid rgba(168, 85, 247, 0.3)', 
+          marginLeft: '12px', 
+          paddingLeft: '12px',
+          marginTop: '4px' 
+        }}>
           {children.map((child, index) => (
             <TreeNode key={index} {...child} />
           ))}
@@ -51,6 +76,10 @@ const TreeNode = ({ name, type, description, children }) => {
     </div>
   );
 };
+
+
+
+
 
 const Tree = () => {
   // Jerarquía real de componentes de la aplicación React del equipo
