@@ -492,3 +492,46 @@ body.dark-mode .page-title h1,
     animation: none;
   }
 }
+
+/* Ajustes del modo claro */
+.app.light {
+  --glass-strong: rgba(109, 74, 255, .10);
+}
+
+/* Botón del menú móvil */
+.app.light .mobile-menu {
+  background: #f2edff;
+  color: #4c3191;
+  border: 1px solid #cbbde8;
+  box-shadow: 0 4px 14px rgba(73, 56, 113, .13);
+}
+
+/* Sección activa de la barra lateral */
+.app.light .nav-link.active {
+  background: linear-gradient(110deg, #e5dcff, #e4f4fc);
+  color: #4c3191;
+  border: 1px solid #bcaadd;
+  box-shadow: inset 3px 0 0 #6941c6,
+              0 3px 10px rgba(73, 56, 113, .08);
+}
+
+.app.light .nav-link:hover:not(.active) {
+  background: #edf0fa;
+  color: #3d315d;
+}
+
+/* Números de la bitácora */
+.app.light .timeline-number {
+  box-sizing: border-box;
+  background: #ede9fe;
+  color: #5b21b6;
+  border: 1px solid #c4b5fd;
+  font-weight: 700;
+}
+
+.app.light .timeline-button[aria-expanded="true"] .timeline-number {
+  background: #ddd6fe;
+  border-color: #a78bfa;
+  color: #4c1d95;
+}
+

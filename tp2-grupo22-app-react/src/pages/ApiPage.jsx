@@ -32,10 +32,15 @@ const ApiPage = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-      <h2>Consumo de API Pública</h2>
-      <p style={{ opacity: 0.85 }}>
-        Esta sección consume en tiempo real la API pública de <strong>Open-Meteo</strong> para obtener las condiciones meteorológicas actuales de la Ciudad de Buenos Aires sin exponer claves privadas.
-      </p>
+      <div className="page-title">
+        <h1>Consumo de API Pública</h1>
+        <p>
+          Esta sección consume en tiempo real la API pública de{" "}
+          <strong>Open-Meteo</strong> para obtener las condiciones
+          meteorológicas actuales de la Ciudad de Buenos Aires
+          sin exponer claves privadas.
+        </p>
+      </div>
 
       <GlassCard style={{ padding: '24px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>

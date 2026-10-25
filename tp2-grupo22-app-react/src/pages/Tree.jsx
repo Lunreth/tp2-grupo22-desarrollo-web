@@ -199,10 +199,15 @@ const Tree = () => {
   };
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-      <h2>Árbol de Componentes del Proyecto</h2>
-      <p style={{ opacity: 0.85 }}>
-        Estructura jerárquica e interactiva de los componentes de React utilizados en la aplicación. Podés hacer clic en los componentes con la flecha para <strong>desplegar o contraer</strong> sus componentes hijos.
-      </p>
+      <div className="page-title">
+        <h1>Árbol de Componentes del Proyecto</h1>
+        <p>
+          Estructura jerárquica e interactiva de los componentes de React
+          utilizados en la aplicación. Podés hacer clic en los componentes
+          con la flecha para <strong>desplegar o contraer</strong> sus
+          componentes hijos.
+        </p>
+      </div>
 
       <GlassCard style={{ padding: '24px' }}>
         <TreeNode {...componentTreeData} />
