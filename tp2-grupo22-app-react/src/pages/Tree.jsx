@@ -4,45 +4,105 @@ import GlassCard from '../components/GlassCard';
 // Componente recursivo para representación interactiva del Árbol de Componentes
 const TreeNode = ({ name, type, description, children }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const hasChildren = children && children.length > 0;
+  const hasChildren = Boolean(children?.length);
 
   return (
-    <div style={{ marginLeft: '20px', marginTop: '8px', marginBottom: '8px' }}>
+    <div
+      style={{
+        minWidth: 0,
+        maxWidth: '100%',
+        marginTop: '8px',
+        marginBottom: '8px'
+      }}
+    >
       <div
         onClick={() => hasChildren && setIsOpen(!isOpen)}
         style={{
           display: 'inline-flex',
+          flexWrap: 'wrap',
           alignItems: 'center',
           gap: '8px',
+          minWidth: 0,
+          maxWidth: '100%',
+          boxSizing: 'border-box',
           padding: '6px 12px',
           borderRadius: '8px',
-          background: 'rgba(255, 255, 255, 0.06)',
-          border: '1px solid rgba(255, 255, 255, 0.12)',
+          background: 'var(--tree-card-bg)',
+          border: '1px solid var(--tree-card-border)',
           cursor: hasChildren ? 'pointer' : 'default',
           userSelect: 'none',
-          transition: 'all 0.2s ease'
+          transition: 'background 0.2s ease'
         }}
       >
         {hasChildren && (
-          <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>
+          <span
+            style={{
+              fontSize: '0.8rem',
+              opacity: 0.8,
+              flexShrink: 0
+            }}
+          >
             {isOpen ? '▼' : '▶'}
           </span>
         )}
-        <strong style={{ color: type === 'Layout' ? '#38bdf8' : type === 'Page' ? '#a78bfa' : '#f472b6' }}>
+
+        <strong
+          style={{
+            color:
+              type === 'Layout' ? '#38bdf8' :
+              type === 'Page' ? '#a78bfa' :
+              '#f472b6',
+            minWidth: 0,
+            maxWidth: '100%',
+            overflowWrap: 'anywhere'
+          }}
+        >
           &lt;{name} /&gt;
         </strong>
-        <span style={{ fontSize: '0.75rem', opacity: 0.6, background: 'rgba(255,255,255,0.1)', padding: '2px 6px', borderRadius: '4px' }}>
+
+        <span
+          style={{
+            fontSize: '0.75rem',
+            color: 'var(--tree-label-color)',
+            background: 'var(--tree-label-bg)',
+            border: '1px solid var(--tree-card-border)',
+            padding: '2px 6px',
+            borderRadius: '4px',
+            minWidth: 0,
+            maxWidth: '100%',
+            boxSizing: 'border-box',
+            overflowWrap: 'anywhere'
+          }}
+        >
           {type}
         </span>
+
         {description && (
-          <span style={{ fontSize: '0.85rem', opacity: 0.75, marginLeft: '6px' }}>
+          <span
+            style={{
+              fontSize: '0.85rem',
+              opacity: 0.75,
+              minWidth: 0,
+              maxWidth: '100%',
+              flex: '0 1 auto',
+              overflowWrap: 'anywhere'
+            }}
+          >
             — {description}
           </span>
         )}
       </div>
 
       {hasChildren && isOpen && (
-        <div style={{ borderLeft: '2px dashed rgba(255, 255, 255, 0.15)', marginLeft: '10px', paddingLeft: '6px' }}>
+        <div
+          className="tree-branch-spacing"
+          style={{
+            minWidth: 0,
+            borderLeft: '2px dashed var(--tree-line-color)',
+            marginLeft: 'clamp(2px, 1vw, 10px)',
+            paddingLeft: 'clamp(4px, 1vw, 6px)'
+          }}
+        >
           {children.map((child, index) => (
             <TreeNode key={index} {...child} />
           ))}

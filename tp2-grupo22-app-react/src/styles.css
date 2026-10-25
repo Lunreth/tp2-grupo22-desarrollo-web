@@ -535,3 +535,35 @@ body.dark-mode .page-title h1,
   color: #4c1d95;
 }
 
+/* Contraste del árbol según el tema */
+.app.dark {
+  --tree-card-bg: rgba(255, 255, 255, .06);
+  --tree-card-border: rgba(255, 255, 255, .18);
+  --tree-label-bg: rgba(255, 255, 255, .10);
+  --tree-label-color: #c4cede;
+  --tree-line-color: #7183a0;
+}
+
+.app.light {
+  --tree-card-bg: #f8faff;
+  --tree-card-border: #aebdd3;
+  --tree-label-bg: #e9e3fa;
+  --tree-label-color: #4c3970;
+  --tree-line-color: #8496b4;
+}
+
+/* Adaptacion de lineas del arbol */
+@media (min-width: 901px) {
+  .tree-branch-spacing {
+    margin-left: 18px !important;
+    padding-left: 18px !important;
+  }
+}
+
+/* Adaptacion de la pantalla */
+@media (min-width: 1200px) {
+  .tree-branch-spacing {
+    margin-left: 26px !important;
+    padding-left: 26px !important;
+  }
+}
