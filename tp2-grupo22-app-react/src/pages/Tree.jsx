@@ -12,7 +12,13 @@ const TreeNode = ({ name, type, description, children }) => {
   const hasChildren = Boolean(children?.length);
 
   return (
-    <div style={{ marginLeft: '16px', marginTop: '6px', marginBottom: '6px', position: 'relative' }}>
+    <div style={{
+      minWidth: 0,
+      maxWidth: '100%',
+      marginTop: '6px',
+      marginBottom: '6px',
+      position: 'relative'
+    }}>
       <div
         onClick={() => hasChildren && setIsOpen(!isOpen)}
         style={{
@@ -42,11 +48,11 @@ const TreeNode = ({ name, type, description, children }) => {
         }}
       >
         {hasChildren && (
-          <span style={{ 
-            fontSize: '0.75rem', 
+          <span style={{
+            fontSize: '0.75rem',
             color: '#a78bfa',
-            transform: isOpen ? 'rotate(0deg)' : 'rotate(-90deg)', 
-            transition: 'transform 0.2s ease' 
+            transform: isOpen ? 'rotate(0deg)' : 'rotate(-90deg)',
+            transition: 'transform 0.2s ease'
           }}>
             ▼
           </span>
@@ -56,8 +62,8 @@ const TreeNode = ({ name, type, description, children }) => {
           style={{
             color:
               type === 'Layout' ? '#38bdf8' :
-              type === 'Page' ? '#a78bfa' :
-              '#f472b6',
+                type === 'Page' ? '#a78bfa' :
+                  '#f472b6',
             minWidth: 0,
             maxWidth: '100%',
             overflowWrap: 'anywhere'
@@ -101,11 +107,12 @@ const TreeNode = ({ name, type, description, children }) => {
 
       {/* Renderizado de ramas con línea sólida continua */}
       {hasChildren && isOpen && (
-        <div style={{ 
-          borderLeft: '2px solid rgba(168, 85, 247, 0.3)', 
-          marginLeft: '12px', 
-          paddingLeft: '12px',
-          marginTop: '4px' 
+        <div style={{
+          borderLeft: '2px solid var(--tree-line-color)',
+          marginLeft: '4px',
+          paddingLeft: '6px',
+          marginTop: '4px',
+          minWidth: 0
         }}>
           {children.map((child, index) => (
             <TreeNode key={index} {...child} />
@@ -122,7 +129,7 @@ const TreeNode = ({ name, type, description, children }) => {
 
 const Tree = () => {
   // Jerarquía real de componentes de la aplicación React del equipo
-    const componentTreeData = {
+  const componentTreeData = {
     name: 'App',
     type: 'Root Component',
     description: 'Gestiona el tema y las rutas; está dentro de BrowserRouter',

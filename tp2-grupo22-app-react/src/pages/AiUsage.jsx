@@ -7,13 +7,30 @@ const rows = [
     "GPT-6.1 Sol en ambas aplicaciones",
     "Perfil React, redacción y revisión del README, ejecución local, orientación sobre GitHub y revisión de la consigna."
   ],
-  ["Cimar Gomez Torrez", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"],
-  ["David Carlos Ruiz Flores", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"],
- 
-  ["Rodrigo Nicolás Molina", "Gemini", "Gemini 1.5 Pro", 
-    "refactorización y diseño interactivo del Árbol de componentes; integración de la Bitácora y maquetación del Perfil 4"],
- 
-    ["Kevin Martínez Cáceres", "Pendiente de confirmar", "Pendiente de confirmar", "Pendiente de confirmar"]
+  [
+    "Cimar Gomez Torrez",
+    "ChatGPT",
+    "GPT-6.1 Sol",
+    "Personalización del perfil, identidad visual y portada; generación del emblema de Equipo Nexus; fondos, animaciones y estilos para ambos temas; adaptación del árbol a distintas pantallas."
+  ],
+  [
+    "David Carlos Ruiz Flores",
+    "No utilizó IA",
+    "No aplica",
+    "Sin tareas asistidas por IA."
+  ],
+  [
+    "Rodrigo Nicolás Molina",
+    "Gemini",
+    "Gemini 1.5 Pro",
+    "Consumo de la API de clima con carga, error y reintento; refactorización y diseño interactivo del árbol de componentes; integración de la bitácora y maquetación del perfil 4."
+  ],
+  [
+    "Kevin Martínez Cáceres",
+    "ChatGPT, según su declaración",
+    "No confirmado",
+    "Asistencia para crear la plantilla React con cinco perfiles editables, estilo Glassmorphism y modos claro y oscuro."
+  ]
 ];
 
 export default function AiUsage() {
@@ -37,8 +54,9 @@ export default function AiUsage() {
           </table>
         </div>
         <p className="note"> 
-          La declaración de Dominguez Angel está confirmada. Las declaraciones
-          de los demás integrantes están pendientes de recopilación.
+            Se recopilaron las declaraciones del equipo. David declaró no haber
+            utilizado IA. Quedan pendientes de confirmación el modelo y las
+            verificaciones realizadas por Kevin.
         </p>
       </GlassCard>
     </section>
